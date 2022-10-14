@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@layer components {
+  .banner {
+    @apply flex h-[550px] w-full flex-col justify-end text-white md:h-[720px];
+    background-image: url('/images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-shadow {
+    text-shadow: 0px 2px 3px #000000;
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0px 4px 4px #000000;
+  }
+
+  .hamburguer {
+    @apply relative z-40 block h-6 w-6 cursor-pointer transition-all duration-[250ms]
+focus:outline-none md:hidden;
+  }
+
+  .hamburguer-top,
+  .hamburguer-middle,
+  .hamburguer-bottom {
+    @apply absolute top-0 left-0 h-[2px] w-6 rotate-0 bg-white transition-all duration-[0.5s];
+  }
+
+  .hamburguer-middle {
+    @apply translate-y-[7px];
+  }
+  .hamburguer-bottom {
+    @apply translate-y-[14px];
+  }
+
+  .open {
+    @apply rotate-90;
+  }
+
+  .open .hamburguer-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  .open .hamburguer-middle {
+    @apply hidden;
+  }
+
+  .open .hamburguer-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
+}
