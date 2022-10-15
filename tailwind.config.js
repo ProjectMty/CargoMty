@@ -7,6 +7,9 @@ const config = {
       fontFamily: {
         serif: ['Poppins', 'serif'],
       },
+      contrast: {
+        110: '1.10',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],

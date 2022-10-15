@@ -1,2 +1,2 @@
 export * from './navbar';
-export * from './icon';
+export * from './fa-icon';
