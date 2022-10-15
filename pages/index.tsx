@@ -6,7 +6,10 @@ import { NextSeo } from 'next-seo';
 const Home: NextPage = () => {
   return (
     <>
-      <NextSeo title='Cargo Monterrey' />
+      <NextSeo
+        title='Cargo Monterrey'
+        description='Cargo Monterrey es tu solución para todas tus compras e importaciones de USA y China.'
+      />
       <DaisyNavbar />
       <Banner />
     </>

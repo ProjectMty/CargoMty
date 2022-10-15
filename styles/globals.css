@@ -56,12 +56,10 @@ h6 {
 
 @layer components {
   .banner {
-    /* @apply min-h-[calc(100vw*296/360)]
-  space-y-4 bg-[url('/images/mobile/background.jpg')] bg-contain lg:min-h-[calc(100vw*830/1920)] lg:bg-[url('/images/desktop/background.jpg')] 2xl:bg-cover; */
-    @apply min-h-[calc(100vw*296/360)] space-y-4 bg-[url('/images/mobile/background.jpg')] bg-cover sm:min-h-[calc(100vw*830/1920)] sm:bg-[url('/images/desktop/background.jpg')];
+    @apply min-h-[calc(100vw*296/360)] space-y-4
+    bg-[url('/images/mobile/background.avif'),url('/images/mobile/background.webp'),url('/images/mobile/background.jpg')]
+    bg-cover sm:min-h-[calc(100vw*830/1920)] sm:bg-[url('/images/desktop/background.avif'),url('/images/desktop/background.webp'),url('/images/desktop/background.jpg')];
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-
     display: flex;
     flex-direction: column;
     justify-content: center;
