@@ -1,12 +1,12 @@
 import Image from 'next/future/image';
 import MexicoFlag from '@/src/assets/flags/mexico.png';
-import CanadaFlag from '@/src/assets/flags/canada.png';
 import UsFlag from '@/src/assets/flags/united-states.png';
+import CanadaFlag from '@/src/assets/flags/canada.png';
 
 const flags = [
   { flag: 'mexico', image: MexicoFlag },
-  { flag: 'canada', image: CanadaFlag },
   { flag: 'united-states', image: UsFlag },
+  { flag: 'canada', image: CanadaFlag },
 ];
 
 const Banner = () => {
