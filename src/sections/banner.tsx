@@ -24,7 +24,7 @@ const Banner = () => {
             key={flag}
             src={image}
             alt={`${flag} flag`}
-            className='w-[24px] rounded-full brightness-95 contrast-110 sm:w-[34px] md:w-[42px] lg:w-[50px] xl:w-[58px] 2xl:w-[70px]'
+            className='w-[24px] rounded-full bg-gray-500 brightness-95 contrast-110 sm:w-[34px] md:w-[42px] lg:w-[50px] xl:w-[58px] 2xl:w-[70px]'
             width={512}
             height={512}
             priority
