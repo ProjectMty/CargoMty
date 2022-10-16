@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-const DaisyNavbar = () => {
+const DaisyNavbar = ({ title = 'Cargo Monterrey' }: { title?: string }) => {
   return (
     <div className='navbar bg-base-100'>
       <div className='flex-1'>
-        <span className='text-xl font-semibold normal-case'>
-          Cargo Monterrey
-        </span>
+        <span className='text-xl font-semibold normal-case'>{title}</span>
       </div>
       <div className='flex-none'>
         <button

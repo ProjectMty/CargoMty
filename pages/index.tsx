@@ -1,19 +1,12 @@
-import { DaisyNavbar } from '@/src/components';
-import { Banner } from '@/src/sections';
+import { EngHome, EspHome } from '@/src/i18n-pages';
 import type { NextPage } from 'next';
-import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <NextSeo
-        title='Cargo Monterrey'
-        description='Cargo Monterrey es tu solución para todas tus compras e importaciones de USA y China.'
-      />
-      <DaisyNavbar />
-      <Banner />
-    </>
-  );
+  const { locale } = useRouter();
+  const isEng = locale === 'en';
+
+  return isEng ? <EngHome /> : <EspHome />;
 };
 
 export default Home;
