@@ -1,3 +1,1 @@
-import Flags from './flags';
-
-export { Flags };
+export { default as Flags } from './flags';

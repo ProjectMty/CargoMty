@@ -1,5 +1,4 @@
-import { DaisyNavbar } from '@/src/components';
-import { Banner } from '@/src/sections';
+import { Banner, DaisyNavbar } from '@/src/components';
 import { NextSeo } from 'next-seo';
 
 const Home = () => {

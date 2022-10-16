@@ -1,6 +1,7 @@
-import { DaisyNavbar } from '@/src/components';
-import { Banner } from '@/src/sections';
+import { Banner, DaisyNavbar } from '@/src/components';
+import { Nosotros } from '@/src/i18n/sections/es';
 import { NextSeo } from 'next-seo';
+import Sevicios from '../../sections/es/sevicios';
 
 const Home = () => {
   return (
@@ -11,11 +12,14 @@ const Home = () => {
       />
       <DaisyNavbar />
       <Banner>
-        <span className='block'>
-          Somos las <strong className='text-bold'>solución</strong> para
-        </span>
+        Somos las <strong className='text-bold'>solución</strong> para
+        <br />
         <strong className='text-bold'>todas</strong> tus compras
       </Banner>
+      <Nosotros />
+
+      <div className='mx-auto my-10 h-[3px] w-3/4 rounded-sm bg-primary md:w-1/2 lg:hidden' />
+      <Sevicios />
     </>
   );
 };
