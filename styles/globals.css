@@ -64,14 +64,13 @@ h6 {
   }
 
   section {
-    @apply my-2 mx-auto flex w-full flex-col items-center space-y-8 px-8 text-center
-    text-base
-    sm:max-w-xl sm:my-4
-    md:max-w-2xl md:space-y-10 md:text-lg md:my-8
-    lg:max-w-3xl lg:space-y-12 lg:text-xl lg:my-16
-    xl:max-w-4xl xl:space-y-14 xl:text-2xl xl:my-24
-    2xl:max-w-6xl 2xl:space-y-16 2xl:text-3xl 2xl:my-32
-    ;
+    @apply  mx-auto flex w-full flex-col items-center px-8 text-center text-base
+    my-2 space-y-7
+    sm:my-4 sm:max-w-xl sm:space-y-8
+    md:my-8 md:max-w-2xl md:space-y-9 md:text-lg
+    lg:my-16 lg:max-w-3xl lg:space-y-11 lg:text-xl
+    xl:my-24 xl:max-w-4xl xl:space-y-12 xl:text-2xl
+    2xl:my-32 2xl:max-w-6xl 2xl:space-y-14 2xl:text-3xl;
   }
 }
 
@@ -97,6 +96,10 @@ h6 {
     text-align: center;
     color: white;
     text-transform: uppercase;
+  }
+
+  .services-separator {
+    @apply mx-auto my-10 h-[3px] w-3/4 rounded-sm bg-primary md:w-1/2;
   }
 
   .text-shadow {

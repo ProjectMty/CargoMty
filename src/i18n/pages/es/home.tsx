@@ -1,5 +1,8 @@
 import { Banner, DaisyNavbar } from '@/src/components';
+import { listaServicios } from '@/src/components/services/lista-servicios';
+import ServiceItem from '@/src/components/services/service-item';
 import { Nosotros } from '@/src/i18n/sections/es';
+import { faStore } from '@fortawesome/free-solid-svg-icons';
 import { NextSeo } from 'next-seo';
 import Sevicios from '../../sections/es/sevicios';
 
@@ -18,8 +21,15 @@ const Home = () => {
       </Banner>
       <Nosotros />
 
-      <div className='mx-auto my-10 h-[3px] w-3/4 rounded-sm bg-primary md:w-1/2 lg:hidden' />
+      <div className='services-separator lg:hidden' />
+
       <Sevicios />
+
+      <div>
+        {listaServicios.map(({ id, ...props }) => (
+          <ServiceItem key={id} {...props} />
+        ))}
+      </div>
     </>
   );
 };
