@@ -2,13 +2,11 @@ import servicesBoxImage from '@/src/assets/services-box.webp';
 import DesktopServices from '@/src/components/services/desktop-services';
 import MobileServices from '@/src/components/services/mobile-services';
 import { spanishServicesList } from '@/src/components/services/services-list';
+import { useMediaQuery } from '@/src/hooks';
 import Image from 'next/future/image';
-import { useMediaQuery } from 'react-responsive';
 
 const Servicios = () => {
-  const isLg = useMediaQuery({
-    query: '(max-width: 1023px)',
-  });
+  const isLg = useMediaQuery('(max-width: 1023px)');
 
   return (
     <>

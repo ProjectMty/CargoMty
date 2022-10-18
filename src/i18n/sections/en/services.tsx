@@ -2,7 +2,7 @@ import AdventagesContainer from '@/src/components/advantages/adventages-containe
 import DesktopServices from '@/src/components/services/desktop-services';
 import MobileServices from '@/src/components/services/mobile-services';
 import { engServicesList } from '@/src/components/services/services-list';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from '@/src/hooks';
 
 const servicesAdventages = [
   { title: 'Affordable Pallet Storage (pallet-in/pallet out warehousing)' },
@@ -16,9 +16,7 @@ const servicesAdventages = [
 ];
 
 const Services = () => {
-  const isLg = useMediaQuery({
-    query: '(max-width: 1023px)',
-  });
+  const isLg = useMediaQuery('(max-width: 1023px)');
 
   return (
     <>
