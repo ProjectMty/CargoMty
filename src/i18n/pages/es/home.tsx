@@ -1,7 +1,6 @@
 import { Banner, DaisyNavbar } from '@/src/components';
-import { Nosotros } from '@/src/i18n/sections/es';
+import { Nosotros, Servicios } from '@/src/i18n/sections/es';
 import { NextSeo } from 'next-seo';
-import Sevicios from '../../sections/es/sevicios';
 
 const Home = () => {
   return (
@@ -20,7 +19,7 @@ const Home = () => {
 
       <div className='services-separator lg:hidden' />
 
-      <Sevicios />
+      <Servicios />
     </>
   );
 };

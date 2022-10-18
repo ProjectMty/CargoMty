@@ -1,12 +1,20 @@
 import {
+  faArrowDownUpAcrossLine,
   faArrowPointer,
   faBoxes,
+  faCalendarCheck,
+  faCartFlatbed,
+  faClock,
   faDolly,
+  faDoorClosed,
   faMapLocationDot,
   faPeopleCarryBox,
+  faPlane,
+  faRankingStar,
   faRightLeft,
   faRoad,
   faStore,
+  faTruckFast,
   faVanShuttle,
 } from '@fortawesome/free-solid-svg-icons';
 import { ServicesList } from './types';
@@ -73,5 +81,65 @@ export const spanishServicesList: ServicesList[] = [
     id: 'map-location-dot',
     icon: faMapLocationDot,
     title: 'Envíos a todo México',
+  },
+];
+
+export const engServicesList: ServicesList[] = [
+  {
+    place: 'one',
+    id: 'ltl-deliveries',
+    icon: faCartFlatbed,
+    title: 'LTL deliveries',
+  },
+  {
+    place: 'one',
+    id: 'overnight',
+    icon: faClock,
+    title: 'Overnight, 2 day, and deferred air freight',
+  },
+  {
+    place: 'one',
+    id: 'international-air',
+    icon: faPlane,
+    title: 'International air (priority and deferred)',
+  },
+  {
+    place: 'two',
+    id: 'ship-seamlessly',
+    icon: faTruckFast,
+    title: 'Ship seamlessly between the US, Canada, and Mexico.',
+  },
+  {
+    place: 'two',
+    id: 'competitive',
+    icon: faRankingStar,
+    title: 'Competitive rates on shipments into and out of Canada and Mexico.',
+  },
+  {
+    place: 'two',
+    id: 'truck-borders',
+    icon: faArrowDownUpAcrossLine,
+    title: 'Our trucks cross both borders every day.',
+  },
+  {
+    place: 'three',
+    id: 'scheduled-deliveries',
+    icon: faCalendarCheck,
+    title: 'Scheduled deliveries to Amazon FBA and Mercado Libre warehouses',
+  },
+
+  {
+    place: 'three',
+    id: 'last-mile-deliveries',
+    icon: faDoorClosed,
+    title: `Last mile deliveries to your buyer's front door in Mexico`,
+  },
+
+  {
+    place: 'three',
+    id: 'merchandise',
+    icon: faDolly,
+    title:
+      'We can pick up your merchandise at your door step in the US and deliver to any address in Mexico.',
   },
 ];

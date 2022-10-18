@@ -5,7 +5,7 @@ import { spanishServicesList } from '@/src/components/services/services-list';
 import Image from 'next/future/image';
 import { useMediaQuery } from 'react-responsive';
 
-const Sevicios = () => {
+const Servicios = () => {
   const isLg = useMediaQuery({
     query: '(max-width: 1023px)',
   });
@@ -22,7 +22,7 @@ const Sevicios = () => {
           alt='Sending Box with Cargo Monterrey'
           width={657}
           height={657}
-          className='h-auto w-full max-w-[192px] drop-shadow-2xl sm:max-w-[224px] lg:max-w-[288px] lg:scale-110 xl:scale-[1.4] 2xl:max-w-[416px] 2xl:scale-[1.3]'
+          className='h-auto w-full max-w-[192px] rounded-full bg-gray-500 drop-shadow-2xl sm:max-w-[224px] lg:max-w-[288px] lg:scale-110 xl:scale-[1.4] 2xl:max-w-[416px] 2xl:scale-[1.3]'
         />
         <div className='responsive-block-space !mt-0 py-3 lg:max-w-[512px] xl:py-10 2xl:max-w-screen-md 2xl:py-16'>
           <h2 className='hidden lg:block lg:text-4xl 2xl:text-6xl'>
@@ -47,4 +47,4 @@ const Sevicios = () => {
   );
 };
 
-export default Sevicios;
+export default Servicios;
