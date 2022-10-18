@@ -1,11 +1,13 @@
-/* eslint-disable global-require */
+/* eslint-disable */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Poppins', 'serif'],
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       contrast: {
         110: '1.10',

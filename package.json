@@ -21,6 +21,9 @@
     "next-seo": "~5.5.0",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
+    "react-responsive": "^9.0.0",
+    "react-responsive-carousel": "^3.2.23",
+    "remeda": "^1.1.0",
     "sharp": "~0.31.1"
   },
   "devDependencies": {

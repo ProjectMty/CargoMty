@@ -1,9 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-// eslint-disable-next-line react/function-component-definition
-export default function Document() {
+const Document = () => {
   return (
-    <Html className='scroll-smooth' lang='es'>
+    <Html className='scroll-smooth'>
       <Head>
         <meta charSet='UTF-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
@@ -24,4 +23,6 @@ export default function Document() {
       </body>
     </Html>
   );
-}
+};
+
+export default Document;
