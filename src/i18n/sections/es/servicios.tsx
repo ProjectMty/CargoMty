@@ -1,7 +1,9 @@
 import servicesBoxImage from '@/src/assets/services-box.webp';
-import DesktopServices from '@/src/components/services/desktop-services';
-import MobileServices from '@/src/components/services/mobile-services';
-import { spanishServicesList } from '@/src/components/services/services-list';
+import {
+  DesktopServices,
+  MobileServices,
+  spanishServicesList,
+} from '@/src/components';
 import { useMediaQuery } from '@/src/hooks';
 import Image from 'next/future/image';
 
@@ -26,10 +28,10 @@ const Servicios = () => {
           <h2 className='hidden lg:block lg:text-4xl 2xl:text-6xl'>
             Nuestros servicios
           </h2>
-          <p className='font-bold lg:text-base lg:font-semibold 2xl:text-xl'>
+          <h3 className='font-bold lg:text-base lg:font-semibold 2xl:text-xl'>
             Cargo Monterrey te ofrece un servicio integral para todas tus
             importaciones de USA y China a México.
-          </p>
+          </h3>
           <p className='font-light lg:text-base 2xl:text-xl'>
             Tú te encargas de comprar en USA, China, o cualquier parte del
             mundo, nosotros nos encargamos de entregarte aquí en México.

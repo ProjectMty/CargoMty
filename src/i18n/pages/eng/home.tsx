@@ -1,7 +1,6 @@
-import { Banner, DaisyNavbar } from '@/src/components';
+import { Banner, DaisyNavbar, AdventagesContainer } from '@/src/components';
 import { NextSeo } from 'next-seo';
 import { Services } from '@/src/i18n/sections/en';
-import AdventagesContainer from '@/src/components/advantages/adventages-container';
 
 const shippingAdvantages = [
   {

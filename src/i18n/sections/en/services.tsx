@@ -1,7 +1,9 @@
-import AdventagesContainer from '@/src/components/advantages/adventages-container';
-import DesktopServices from '@/src/components/services/desktop-services';
-import MobileServices from '@/src/components/services/mobile-services';
-import { engServicesList } from '@/src/components/services/services-list';
+import {
+  AdventagesContainer,
+  DesktopServices,
+  engServicesList,
+  MobileServices,
+} from '@/src/components';
 import { useMediaQuery } from '@/src/hooks';
 
 const servicesAdventages = [
