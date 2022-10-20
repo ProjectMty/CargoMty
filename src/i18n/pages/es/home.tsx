@@ -15,8 +15,8 @@ const Home = () => {
   return (
     <>
       <NextSeo
-        title='Cargo Monterrey'
-        description='Cargo Monterrey es tu solución para todas tus compras e importaciones de USA y China.'
+        title='Cargo Monterrey - Logística Aplicada'
+        description='Todos los trámites son cumpliendo las normas de cada país en el que trabajamos. Damos certeza y aseguramos los pedidos que manejamos.'
       />
       <DaisyNavbar />
       <Banner>
@@ -35,7 +35,6 @@ const Home = () => {
       <Ubicaciones />
       <Ecommerce />
       <Contacto />
-      <Footer />
     </>
   );
 };

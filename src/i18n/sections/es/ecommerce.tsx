@@ -12,7 +12,7 @@ const Ecommerce = () => {
         <br />
         para <strong>Estados Unidos</strong>
       </h2>
-      <Link href='/#'>
+      <Link href='/' locale='en'>
         <a className='btn glass px-7'>Ver más</a>
       </Link>
     </section>

@@ -6,3 +6,5 @@ export * from './navbar';
 export * from './services';
 export * from './steps';
 export * from './footer';
+export * from './weight-lbs';
+export * from './contact-form';

@@ -7,9 +7,11 @@ type Props = Advantage;
 const AdvantageItem = ({ title, icon = faCircleCheck }: Props) => {
   return (
     <div className='mx-auto flex w-full items-center justify-start space-x-4  text-primary'>
-      <FontAwesomeIcon icon={icon} className='text-4xl' />
+      <div className='min-w-[2.5rem]'>
+        <FontAwesomeIcon icon={icon} className='text-4xl' />
+      </div>
       <p
-        className='text-left text-lg font-light
+        className='text-left text-base font-light
       sm:text-lg
       md:text-xl
       lg:text-xl

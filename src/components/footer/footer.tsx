@@ -12,25 +12,25 @@ const Footer = () => {
       <div className='space-x-4'>
         <FontAwesomeIcon
           icon={faFacebookF}
-          className='h-4 w-4 rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+          className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
         />
         <FontAwesomeIcon
           icon={faInstagram}
-          className='h-4 w-4 rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+          className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
         />
         <FontAwesomeIcon
           icon={faYoutube}
-          className='h-4 w-4 rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+          className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
         />
         <FontAwesomeIcon
           icon={faLinkedinIn}
-          className='h-4 w-4 rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
+          className='h-4 w-4 cursor-pointer rounded-full bg-white p-2 text-base text-[#1E1E1E] hover:bg-secondary'
         />
       </div>
-      <p>Aviso de privacidad - Términos y condiciones</p>
+      {/* <p>Aviso de privacidad - Términos y condiciones</p> */}
       <div>
         <p>Copyright © 2022. Cargo Monterrey.</p>
-        <p>Todos los derechos reservados.</p>
+        {/* <p>Todos los derechos reservados.</p> */}
       </div>
     </footer>
   );

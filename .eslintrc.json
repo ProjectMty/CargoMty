@@ -100,6 +100,7 @@
       }
     ],
     "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "prettier/prettier": [
       "error",
       {},

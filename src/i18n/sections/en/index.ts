@@ -1,3 +1,17 @@
+import CompetitiveRates from './competitive-rates';
+import Costs from './costs';
+import NotPermitted from './not-permitted';
+import OrderFulfillment from './order-fulfillment';
+import Process from './process';
 import Services from './services';
+import Us from './us';
 
-export { Services };
+export {
+  Services,
+  Us,
+  OrderFulfillment,
+  CompetitiveRates,
+  Costs,
+  Process,
+  NotPermitted,
+};
