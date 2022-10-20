@@ -1,9 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-const DaisyNavbar = ({ title = 'Cargo Monterrey' }: { title?: string }) => {
+const DaisyNavbar = ({
+  toggleDrawer,
+  title = 'Cargo Monterrey',
+}: {
+  toggleDrawer: () => void;
+  title?: string;
+}) => {
   return (
-    <div className='navbar bg-base-100'>
+    <nav className='navbar sticky top-0 z-50 bg-base-100 shadow-xl'>
       <div className='flex-1'>
         <span className='text-xl font-semibold normal-case'>{title}</span>
       </div>
@@ -12,11 +18,12 @@ const DaisyNavbar = ({ title = 'Cargo Monterrey' }: { title?: string }) => {
           type='button'
           className='btn btn-ghost btn-circle'
           aria-label='open-menu'
+          onClick={toggleDrawer}
         >
           <FontAwesomeIcon icon={faBars} size='xl' />
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -56,21 +56,24 @@ h6 {
 
 @layer base {
   h2 {
-    @apply font-sans text-2xl font-semibold
-    md:text-3xl
-    lg:text-4xl
-    xl:text-5xl
+    @apply font-sans text-4xl font-semibold
+    sm:text-4xl
+    md:text-5xl
+    lg:text-5xl
+    xl:text-6xl
     2xl:text-6xl;
   }
 
   section {
-    @apply mx-auto my-2 flex w-full flex-col items-center space-y-7 px-8
+    @apply mx-auto my-10 flex w-full flex-col items-center space-y-7 px-8
     text-center text-base
-    sm:my-4 sm:max-w-xl sm:space-y-8
-    md:my-8 md:max-w-2xl md:space-y-9 md:text-lg
+    sm:my-12 sm:max-w-xl sm:space-y-8
+    md:my-14 md:max-w-2xl md:space-y-9 md:text-lg
     lg:my-16 lg:max-w-3xl lg:space-y-11 lg:text-xl
-    xl:my-24 xl:max-w-4xl xl:space-y-12 xl:text-2xl
-    2xl:my-32 2xl:max-w-6xl 2xl:space-y-14 2xl:text-3xl;
+    xl:my-20 xl:max-w-4xl xl:space-y-12 xl:text-2xl
+    2xl:my-24 2xl:max-w-6xl 2xl:space-y-14 2xl:text-3xl;
+    /* padding-top: 64px; */
+    /* margin-top: -64px; */
   }
 }
 
@@ -81,6 +84,17 @@ h6 {
     lg:space-y-12
     xl:space-y-14
     2xl:space-y-16;
+  }
+
+  .section-full {
+    @apply w-full min-w-full max-w-full;
+  }
+
+  .carousel-css .carousel.carousel-slider button {
+    @apply bg-gray-400;
+  }
+  .carousel-css .carousel.carousel-slider .slider-wrapper ul {
+    @apply xl:justify-center;
   }
 
   .banner {
@@ -152,8 +166,10 @@ focus:outline-none lg:hidden;
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
   }
 
-  .ecommerce-usa {
-    @apply mb-0 bg-cover bg-center bg-no-repeat py-6;
+  .ecommerce-separator {
+    @apply section-full mb-0 bg-cover bg-center bg-no-repeat py-6 lg:space-y-4;
+  }
+  .usa-ecommerce {
     background-color: #21165f;
     background-image: linear-gradient(
         144deg,
@@ -162,8 +178,7 @@ focus:outline-none lg:hidden;
       ),
       url(/images/mobile/united-states-ecommerce.jpg);
   }
-  .cargomty-mex {
-    @apply mb-0 bg-cover bg-center bg-no-repeat py-6;
+  .mexico-cargo {
     background-color: #21165f;
     background-image: linear-gradient(
         144deg,
@@ -173,13 +188,10 @@ focus:outline-none lg:hidden;
       url(/images/mobile/mexico-cargomty.png);
   }
 
-  #contacto {
-    @apply my-0 bg-cover bg-center bg-no-repeat py-12 text-white;
+  #contacto,
+  #contact {
+    @apply section-full my-0 bg-cover bg-center bg-no-repeat py-12 text-white;
     background-color: #21165f;
     background-image: url(/images/mobile/contact.png);
-  }
-
-  .section-full {
-    @apply m-0 w-full min-w-full max-w-full;
   }
 }

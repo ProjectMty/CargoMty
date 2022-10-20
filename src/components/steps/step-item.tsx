@@ -10,9 +10,8 @@ const StepItem = ({
   steps: number;
   title: string;
 }) => {
-  const isLg = useMediaQuery('(max-width: 1023px)');
-  const showDots =
-    (isLg && step !== steps) || (step % 3 !== 0 && step !== steps);
+  const isLg = useMediaQuery('(min-width: 1023px)');
+  const showDots = isLg && step % 3 !== 0 && step !== steps;
   const color = step % 2 === 0 ? 'bg-primary' : 'bg-secondary';
 
   return (
@@ -24,7 +23,7 @@ const StepItem = ({
         )}
       >
         {step}
-        {false && (
+        {showDots && (
           <div className='lg:min-w-8 min-h-8 absolute top-full z-[999] translate-y-[16px] space-y-3 md:translate-y-[10px] lg:top-1/3 lg:left-full lg:flex lg:min-h-0 lg:translate-x-[50px] lg:space-x-3 lg:space-y-0 xl:translate-x-[72px] 2xl:translate-x-[114px]'>
             <div
               className={clsx(

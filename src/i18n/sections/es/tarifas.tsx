@@ -1,11 +1,11 @@
 const Tarifas = () => {
   return (
-    <section id='tarifas' className='mt-8'>
+    <section id='tarifas'>
       <h2>Tarifas</h2>
       <div className='flex flex-col items-center justify-center space-y-12 lg:flex-row lg:space-y-0 lg:space-x-8'>
         <div className='tarifas-card'>
           <div>
-            <h2 className='font-bold uppercase md:text-2xl'>
+            <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales
             </h2>
             <p>Menores a $500 USD</p>
@@ -28,7 +28,7 @@ const Tarifas = () => {
         </div>
         <div className='tarifas-card'>
           <div>
-            <h2 className='font-bold uppercase md:text-2xl'>
+            <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales
             </h2>
             <p>Mayores a $500 USD</p>
@@ -50,7 +50,7 @@ const Tarifas = () => {
         </div>
         <div className='tarifas-card'>
           <div>
-            <h2 className='font-bold uppercase md:text-2xl'>Empresariales</h2>
+            <h2 className='text-lg font-bold uppercase md:text-2xl'>Empresariales</h2>
             <p>A partir de $100 USD</p>
           </div>
 

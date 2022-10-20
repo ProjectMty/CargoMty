@@ -1,10 +1,7 @@
 const Nosotros = () => {
   return (
-    <section
-      id='nosotros'
-      className='mt-8 sm:my-12 md:my-16 lg:my-20 xl:my-24 2xl:my-28'
-    >
-      <h2>
+    <section id='nosotros'>
+      <h2 className='leading-tight'>
         ¡Somos tu shipping address
         <br />
         en Estados Unidos!

@@ -2,11 +2,7 @@ import Link from 'next/link';
 
 const Ecommerce = () => {
   return (
-    <section
-      id='ecommerce'
-      // eslint-disable-next-line tailwindcss/no-contradicting-classname
-      className='ecommerce-usa section-full lg:space-y-4'
-    >
+    <section id='ecommerce' className='ecommerce-separator usa-ecommerce'>
       <h2 className='text-base font-normal uppercase text-white lg:text-2xl 2xl:text-3xl'>
         <strong>Conoce nuestro</strong> servicio
         <br />

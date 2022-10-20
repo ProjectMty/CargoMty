@@ -4,7 +4,7 @@ import Image from 'next/future/image';
 
 const Ubicaciones = () => {
   return (
-    <section id='ubicaciones' className='mt-5 min-h-[210px]'>
+    <section id='ubicaciones' className=' min-h-[210px]'>
       <h2>Nuestras ubicaciones</h2>
       <Tab.Group>
         <Tab.List className='space-x-6 text-base font-light text-primary sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl'>
@@ -18,7 +18,7 @@ const Ubicaciones = () => {
             Canadá
           </Tab>
         </Tab.List>
-        <Tab.Panels>
+        <Tab.Panels className='!mb-10'>
           <Tab.Panel>
             <Image
               src={MexicoMap}

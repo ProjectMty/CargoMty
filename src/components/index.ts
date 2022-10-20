@@ -8,3 +8,4 @@ export * from './steps';
 export * from './footer';
 export * from './weight-lbs';
 export * from './contact-form';
+export * from './drawer';

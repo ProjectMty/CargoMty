@@ -26,7 +26,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
       <div data-theme='mytheme'>
         <Component {...pageProps} />
-        <Footer />
       </div>
     </>
   );

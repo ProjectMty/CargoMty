@@ -22,7 +22,7 @@ const ContactIcon = ({
       >
         <FontAwesomeIcon icon={icon} />
       </div>
-      <div className='text-left text-sm font-normal text-white lg:text-base'>
+      <div className='text-left text-sm font-normal text-white lg:text-base 2xl:text-lg'>
         {children}
       </div>
     </div>
