@@ -142,4 +142,21 @@ focus:outline-none lg:hidden;
   .open .hamburguer-bottom {
     transform: rotate(-45deg) translateY(6px) translateX(-6px);
   }
+
+  .ecommerce-usa {
+    @apply mb-0 bg-cover bg-center bg-no-repeat py-6;
+    background-color: #21165f;
+    background-image: linear-gradient(
+        144deg,
+        rgba(33, 22, 95, 0.7) 0%,
+        rgba(33, 22, 95, 0.7) 70%
+      ),
+      url(/images/mobile/united-states-ecommerce.jpg);
+  }
+
+  #contacto {
+    @apply my-0 bg-cover bg-center bg-no-repeat py-6 text-white;
+    background-color: #21165f;
+    background-image: url(/images/mobile/contact.png);
+  }
 }
