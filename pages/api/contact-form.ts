@@ -11,7 +11,7 @@ type Body = {
 };
 
 const verifyRecaptcha = async (token: string) => {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY as string;
 
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
@@ -65,11 +65,11 @@ export default async function handler(
       return res.status(400).json({ message: 'Invalid token' });
     }
 
-    sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+    sendgrid.setApiKey(process.env.SENDGRID_API_KEY as string);
 
     await sendgrid.send({
-      to: process.env.SENDGRID_TO_EMAIL,
-      from: process.env.SENDGRID_FROM_EMAIL,
+      to: process.env.SENDGRID_TO_EMAIL as string,
+      from: process.env.SENDGRID_FROM_EMAIL as string,
       subject: 'Sending with SendGrid is Fun',
       text: 'and easy to do anywhere, even with Node.js',
       html: `<pre>${JSON.stringify(
