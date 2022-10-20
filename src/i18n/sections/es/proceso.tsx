@@ -1,7 +1,5 @@
 import { StepContainer } from '@/src/components';
-import clsx from 'clsx';
 import { useMemo } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 const Proceso = () => {
   // const { ref, inView } = useInView({ triggerOnce: true, delay: 200 });

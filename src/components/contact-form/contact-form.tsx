@@ -41,35 +41,35 @@ const ContactForm = ({
 
   const onSubmit: SubmitHandler<ContactFormFields> = async (data) => {
     if (!executeRecaptcha) {
-      console.error('!executeRecaptcha');
       return;
     }
 
     try {
       const token = await executeRecaptcha();
       if (!token) {
-        console.error('!token');
         return;
       }
 
       setLoading(true);
-      const response = await fetch('http://localhost:3000/api/contact-form', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
+      const response = await fetch(
+        `${process.env.API_URL as string}/api/contact-form`,
+        {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({ ...data, token }),
         },
-        body: JSON.stringify({ ...data, token }),
-      });
+      );
 
       if (!response.ok) {
         throw new Error(`Error! status: ${response.status}`);
       }
 
-      const result = await response.json();
-
-      console.log('result is: ', JSON.stringify(result, null, 4));
+      await response.json();
       reset();
     } catch (err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     } finally {
       setLoading(false);

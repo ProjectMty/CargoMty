@@ -5,6 +5,7 @@ import CargoMtyLogo from '@/src/assets/logo-cargomty.webp';
 
 const DaisyNavbar = ({
   toggleDrawer,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title = 'Cargo Monterrey',
 }: {
   toggleDrawer: () => void;

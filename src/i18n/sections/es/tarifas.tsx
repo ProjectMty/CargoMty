@@ -50,7 +50,9 @@ const Tarifas = () => {
         </div>
         <div className='tarifas-card'>
           <div>
-            <h2 className='text-lg font-bold uppercase md:text-2xl'>Empresariales</h2>
+            <h2 className='text-lg font-bold uppercase md:text-2xl'>
+              Empresariales
+            </h2>
             <p>A partir de $100 USD</p>
           </div>
 
