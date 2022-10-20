@@ -1,17 +1,14 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import '@/styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'animate.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 config.autoAddCss = false;
-
-/* library.add(fas);
-library.add(far);
-library.add(fab); */
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (

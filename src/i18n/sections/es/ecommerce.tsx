@@ -2,10 +2,13 @@ import Link from 'next/link';
 
 const Ecommerce = () => {
   return (
-    <section id='ecommerce' className='ecommerce-separator usa-ecommerce'>
+    <section
+      id='ecommerce'
+      className='ecommerce-separator usa-ecommerce lg:space-y-8 lg:py-12'
+    >
       <h2 className='text-base font-normal uppercase text-white lg:text-2xl 2xl:text-3xl'>
         <strong>Conoce nuestro</strong> servicio
-        <br />
+        <br className='lg:hidden' />
         para <strong>Estados Unidos</strong>
       </h2>
       <Link href='/' locale='en'>

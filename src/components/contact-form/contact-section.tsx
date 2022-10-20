@@ -42,8 +42,8 @@ const ContactSection = ({
   return (
     <div className='space-y-8 lg:flex lg:w-3/4 lg:flex-row lg:space-y-0 xl:w-2/3'>
       <div className='space-y-6 rounded-2xl bg-[#21165FB2] p-8 lg:w-2/3 lg:rounded-r-none lg:bg-[#21165F] xl:w-1/2'>
-        <h3 className='lg:text-3xl'>{title}</h3>
-        <div className='space-y-6 lg:flex lg:flex-col lg:space-y-10 lg:px-6'>
+        <h3 className='pt-8 lg:text-3xl'>{title}</h3>
+        <div className='space-y-6 lg:flex lg:flex-col lg:space-y-12 lg:px-6'>
           {location && (
             <ContactIcon icon={faLocationDot}>
               <Link href={location.link}>

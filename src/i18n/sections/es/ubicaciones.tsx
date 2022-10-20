@@ -1,5 +1,7 @@
 import { Tab } from '@headlessui/react';
 import MexicoMap from '@/src/assets/maps/mexico-map.png';
+import USAMap from '@/src/assets/maps/usa-map.png';
+import CanadaMap from '@/src/assets/maps/canada-map.png';
 import Image from 'next/future/image';
 
 const Ubicaciones = () => {
@@ -22,28 +24,31 @@ const Ubicaciones = () => {
           <Tab.Panel>
             <Image
               src={MexicoMap}
-              alt='Mexico locations map'
+              alt='Mexico locations'
               width={983}
               height={650}
-              className='w-full'
+              className='w-full 2xl:w-4/5'
+              priority
             />
           </Tab.Panel>
           <Tab.Panel>
             <Image
-              src={MexicoMap}
-              alt='USA locations map'
+              src={USAMap}
+              alt='USA locations'
               width={983}
               height={650}
-              className='w-full'
+              className='w-full 2xl:w-4/5'
+              priority
             />
           </Tab.Panel>
           <Tab.Panel>
             <Image
-              src={MexicoMap}
-              alt='Canada locations map'
+              src={CanadaMap}
+              alt='Canada locations'
               width={983}
               height={650}
-              className='w-full'
+              className='w-full 2xl:w-3/4'
+              priority
             />
           </Tab.Panel>
         </Tab.Panels>
