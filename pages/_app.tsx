@@ -5,7 +5,7 @@ import Head from 'next/head';
 import '@/styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Footer } from '@/src/components';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 config.autoAddCss = false;
 
@@ -24,9 +24,19 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <meta name='author' content='Cargo Monterrey, Grayrids' />
       </Head>
-      <div data-theme='mytheme'>
-        <Component {...pageProps} />
-      </div>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+        scriptProps={{
+          async: false, // optional, default to false,
+          defer: true, // optional, default to false
+          appendTo: 'body', // optional, default to "head", can be "head" or "body",
+          nonce: undefined,
+        }}
+      >
+        <div data-theme='mytheme'>
+          <Component {...pageProps} />
+        </div>
+      </GoogleReCaptchaProvider>
     </>
   );
 };

@@ -1,12 +1,7 @@
-import { phoneStringToLink } from '@/src/utils';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
-import ContactIcon from './contact-icon';
+import clsx from 'clsx';
+import { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 type InputProps = {
   label: string;
@@ -14,164 +9,175 @@ type InputProps = {
 };
 
 type Props = {
-  title: string;
-  btnMessage: string;
   nameInput: InputProps;
   phoneInput: InputProps;
   emailInput: InputProps;
   subjectInput: InputProps;
-  location?: { label: string; link: string };
-  phone?: string;
-  whatsapp?: string[];
-  email?: string;
+  btnMessage: string;
+};
+
+type ContactFormFields = {
+  name: string;
+  phone: string;
+  email: string;
+  subject: string;
 };
 
 const ContactForm = ({
-  title,
-  btnMessage,
   nameInput,
   phoneInput,
   emailInput,
   subjectInput,
-  location,
-  phone,
-  whatsapp,
-  email,
+  btnMessage,
 }: Props) => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormFields>();
+
+  const onSubmit: SubmitHandler<ContactFormFields> = async (data) => {
+    if (!executeRecaptcha) {
+      console.error('!executeRecaptcha');
+      return;
+    }
+
+    try {
+      const token = await executeRecaptcha();
+      if (!token) {
+        console.error('!token');
+        return;
+      }
+
+      setLoading(true);
+      const response = await fetch('http://localhost:3000/api/contact-form', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ ...data, token }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      console.log('result is: ', JSON.stringify(result, null, 4));
+      reset();
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className='space-y-8 lg:flex lg:w-3/4 lg:flex-row lg:space-y-0 xl:w-2/3'>
-      <div className='space-y-6 rounded-2xl bg-[#21165FB2] p-8 lg:w-2/3 lg:rounded-r-none lg:bg-[#21165F] xl:w-1/2'>
-        <h3 className='lg:text-3xl'>{title}</h3>
-        <div className='space-y-6 lg:flex lg:flex-col lg:space-y-10 lg:px-6'>
-          {location && (
-            <ContactIcon icon={faLocationDot}>
-              <Link href={location.link}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-block hover:underline'
-                >
-                  {location.label}
-                </a>
-              </Link>
-            </ContactIcon>
+    <form
+      className='space-y-2 rounded-2xl bg-[#21165F] p-8 lg:w-1/2 lg:rounded-l-none lg:bg-[#21165FB2]'
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className='group form-control w-full '>
+        <label className='label' htmlFor='name'>
+          <span
+            className={clsx(
+              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              errors.name && 'text-error group-focus-within:text-error',
+            )}
+          >
+            {nameInput.label} *
+          </span>
+        </label>
+        <input
+          id='name'
+          type='text'
+          placeholder={nameInput.placeholder}
+          className={clsx(
+            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            errors.name && 'input-error group-focus-within:input-error',
           )}
-          {phone && (
-            <ContactIcon icon={faPhone}>
-              <Link href={`tel:+${phoneStringToLink(phone)}`}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-block hover:underline'
-                >
-                  {phone}
-                </a>
-              </Link>
-            </ContactIcon>
-          )}
-          {whatsapp && (
-            <ContactIcon icon={faWhatsapp}>
-              {whatsapp.map((tel) => (
-                <Link
-                  key={tel}
-                  href={`https://wa.me/${phoneStringToLink(tel)}`}
-                >
-                  <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='block hover:underline'
-                  >
-                    {tel}
-                  </a>
-                </Link>
-              ))}
-            </ContactIcon>
-          )}
-          {email && (
-            <ContactIcon icon={faEnvelope}>
-              <Link href={`mailto:${email}`}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-block break-all hover:underline'
-                >
-                  {email}
-                </a>
-              </Link>
-            </ContactIcon>
-          )}
-        </div>
+          {...register('name', { required: true })}
+        />
       </div>
-      <form
-        className='space-y-2 rounded-2xl bg-[#21165F] p-8 lg:w-1/2 lg:rounded-l-none lg:bg-[#21165FB2]'
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
+      <div className='group form-control w-full '>
+        <label className='label' htmlFor='phone'>
+          <span
+            className={clsx(
+              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              errors.phone && 'text-error group-focus-within:text-error',
+            )}
+          >
+            {phoneInput.label} *
+          </span>
+        </label>
+        <input
+          id='phone'
+          type='text'
+          placeholder={phoneInput.placeholder}
+          className={clsx(
+            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            errors.phone && 'input-error group-focus-within:input-error',
+          )}
+          {...register('phone', { required: true })}
+        />
+      </div>
+      <div className='group form-control w-full '>
+        <label className='label' htmlFor='email'>
+          <span
+            className={clsx(
+              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              errors.email && 'text-error group-focus-within:text-error',
+            )}
+          >
+            {emailInput.label} *
+          </span>
+        </label>
+        <input
+          id='email'
+          type='email'
+          placeholder={emailInput.placeholder}
+          className={clsx(
+            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            errors.email && 'input-error group-focus-within:input-error',
+          )}
+          {...register('email', { required: true })}
+        />
+      </div>
+      <div className='group form-control w-full '>
+        <label className='label' htmlFor='subject'>
+          <span
+            className={clsx(
+              'label-text text-white focus:text-secondary group-focus-within:text-secondary',
+              errors.subject && 'text-error group-focus-within:text-error',
+            )}
+          >
+            {subjectInput.label} *
+          </span>
+        </label>
+        <textarea
+          id='subject'
+          placeholder={subjectInput.placeholder}
+          className={clsx(
+            'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y text-black placeholder:text-gray-400 group-focus-within:textarea-secondary',
+            errors.subject &&
+              'textarea-error group-focus-within:textarea-error',
+          )}
+          {...register('subject', { required: true })}
+        />
+      </div>
+      <div className='h-3' />
+      <button
+        type='submit'
+        className='btn btn-secondary btn-block py-0 text-white lg:w-56'
+        disabled={loading}
       >
-        <div className='group form-control w-full '>
-          <label className='label' htmlFor='name'>
-            <span className='label-text text-white focus:text-secondary group-focus-within:text-secondary'>
-              {nameInput.label}
-            </span>
-          </label>
-          <input
-            id='name'
-            name='name'
-            type='text'
-            placeholder={nameInput.placeholder}
-            className='input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary'
-          />
-        </div>
-        <div className='group form-control w-full '>
-          <label className='label' htmlFor='phone'>
-            <span className='label-text text-white focus:text-secondary group-focus-within:text-secondary'>
-              {phoneInput.label}
-            </span>
-          </label>
-          <input
-            id='phone'
-            name='phone'
-            type='text'
-            placeholder={phoneInput.placeholder}
-            className='input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary'
-          />
-        </div>
-        <div className='group form-control w-full '>
-          <label className='label' htmlFor='email'>
-            <span className='label-text text-white focus:text-secondary group-focus-within:text-secondary'>
-              {emailInput.label}
-            </span>
-          </label>
-          <input
-            id='email'
-            name='email'
-            type='email'
-            placeholder={emailInput.placeholder}
-            className='input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary'
-          />
-        </div>
-        <div className='group form-control w-full '>
-          <label className='label' htmlFor='subject'>
-            <span className='label-text text-white focus:text-secondary group-focus-within:text-secondary'>
-              {subjectInput.label}
-            </span>
-          </label>
-          <textarea
-            id='subject'
-            name='subject'
-            placeholder={subjectInput.placeholder}
-            className='textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y text-black placeholder:text-gray-400 group-focus-within:textarea-secondary'
-          />
-        </div>
-        <div className='h-3' />
-        <button
-          type='submit'
-          className='btn btn-secondary btn-block py-0 text-white lg:w-56'
-        >
-          {btnMessage}
-        </button>
-      </form>
-    </div>
+        {btnMessage}
+      </button>
+    </form>
   );
 };
 

@@ -1,10 +1,10 @@
-import { ContactForm } from '@/src/components';
+import { ContactSection } from '@/src/components';
 
 const Contacto = () => {
   return (
     <section id='contacto'>
       <h2>Contáctanos</h2>
-      <ContactForm
+      <ContactSection
         title='¡Empieza a importar ya!!'
         location={{
           label:

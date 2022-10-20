@@ -1,4 +1,4 @@
-import { ContactForm } from '@/src/components';
+import { ContactSection } from '@/src/components';
 
 const Contact = () => {
   return (
@@ -7,7 +7,7 @@ const Contact = () => {
         Contact us today to discuss how we can launch your e-commerce business
         in Mexico today!
       </h2>
-      <ContactForm
+      <ContactSection
         title='Start shipping today!'
         phone='+1 956 284 6632'
         email='amzshipments@cargomty.com'
