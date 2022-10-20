@@ -6,19 +6,25 @@ import TeikerLogo from '@/src/assets/partnership/teiker.png';
 import TresGuerrasLogo from '@/src/assets/partnership/tres-guerras.png';
 import Image from 'next/future/image';
 import Link from 'next/link';
+import { useMediaQuery } from '@/src/hooks';
 
 const Partnerships = () => {
+  const isLg = useMediaQuery('(min-width: 1023px)');
+
   return (
     <section id='partnerships' className='mt-8'>
       <h2>Nuestro partnerships</h2>
       <Carousel
         className='w-full'
-        emulateTouch
-        infiniteLoop
-        showArrows={false}
+        centerMode={isLg}
+        centerSlidePercentage={16.66}
+        emulateTouch={!isLg}
+        infiniteLoop={!isLg}
+        showArrows={!isLg}
+        swipeable={!isLg}
+        showIndicators={false}
         showStatus={false}
         showThumbs={false}
-        showIndicators={false}
         renderItem={(item) => (
           <div className='flex h-full w-full items-center justify-center px-4'>
             {item}

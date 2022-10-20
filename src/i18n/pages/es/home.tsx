@@ -9,16 +9,6 @@ import {
   Tarifas,
   Ubicaciones,
 } from '@/src/i18n/sections/es';
-import {
-  faFacebook,
-  faFacebookF,
-  faInstagram,
-  faInstagramSquare,
-  faLinkedin,
-  faLinkedinIn,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NextSeo } from 'next-seo';
 
 const Home = () => {

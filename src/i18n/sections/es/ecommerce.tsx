@@ -5,14 +5,14 @@ const Ecommerce = () => {
     <section
       id='ecommerce'
       // eslint-disable-next-line tailwindcss/no-contradicting-classname
-      className='ecommerce-usa'
+      className='ecommerce-usa section-full lg:space-y-4'
     >
-      <h2 className='text-base font-normal uppercase text-white'>
+      <h2 className='text-base font-normal uppercase text-white lg:text-2xl 2xl:text-3xl'>
         <strong>Conoce nuestro</strong> servicio
         <br />
         para <strong>Estados Unidos</strong>
       </h2>
-      <Link href='#'>
+      <Link href='/#'>
         <a className='btn glass px-7'>Ver más</a>
       </Link>
     </section>

@@ -7,15 +7,15 @@ const Ubicaciones = () => {
     <section id='ubicaciones' className='mt-5 min-h-[210px]'>
       <h2>Nuestras ubicaciones</h2>
       <Tab.Group>
-        <Tab.List className='space-x-6 text-base font-light text-primary'>
-          <Tab className='decoration-2 underline-offset-2 ui-selected:font-bold ui-selected:underline'>
+        <Tab.List className='space-x-6 text-base font-light text-primary sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl'>
+          <Tab className='decoration-2 underline-offset-2 outline-none duration-150 ui-selected:font-bold ui-selected:underline'>
             México
           </Tab>
-          <Tab className='decoration-2 underline-offset-2 ui-selected:font-bold ui-selected:underline'>
+          <Tab className='decoration-2 underline-offset-2 outline-none duration-150 ui-selected:font-bold ui-selected:underline'>
             USA
           </Tab>
-          <Tab className='decoration-2 underline-offset-2 ui-selected:font-bold ui-selected:underline'>
-            Canada
+          <Tab className='decoration-2 underline-offset-2 outline-none duration-150 ui-selected:font-bold ui-selected:underline'>
+            Canadá
           </Tab>
         </Tab.List>
         <Tab.Panels>
