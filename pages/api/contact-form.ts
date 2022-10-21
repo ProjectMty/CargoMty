@@ -70,13 +70,26 @@ export default async function handler(
     await sendgrid.send({
       to: process.env.SENDGRID_TO_EMAIL as string,
       from: process.env.SENDGRID_FROM_EMAIL as string,
-      subject: 'Sending with SendGrid is Fun',
-      text: 'and easy to do anywhere, even with Node.js',
-      html: `<pre>${JSON.stringify(
-        { name, phone, email, subject },
-        null,
-        2,
-      )}</pre>`,
+      subject: 'Nuevo prospecto desde cargomty.com',
+      text: 'Se ha registrado un prospecto a través de cargomty.com',
+      html: `<table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${name}</td>
+          <td>${phone}</td>
+          <td>${email}</td>
+          <td>${subject}</td>
+        </tr>
+      </tbody>
+      </table>`,
     });
 
     return res.status(200).json({ message: 'Ok' });

@@ -10,7 +10,7 @@ const Contact = () => {
       <ContactSection
         title='Start shipping today!'
         phone='+1 956 284 6632'
-        email='amzshipments@cargomty.com'
+        email='info@cargomty.com'
         btnMessage='Send'
         nameInput={{ label: 'Name', placeholder: 'Name' }}
         phoneInput={{ label: 'Phone', placeholder: 'Phone' }}
