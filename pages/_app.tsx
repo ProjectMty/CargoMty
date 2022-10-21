@@ -22,16 +22,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           content='Cargo Monterrey Logística Aplicada, logística, compras online, México, USA, Canadá, China, Europa, Warehouse, PO BOX, Comercio, Importación, Exportación'
         />
         <meta name='author' content='Cargo Monterrey, Grayrids' />
-        <meta
-          name='og:image'
-          content='https://cargomonterrey.luiscarrillo.mx/cargomty-og.jpg'
-        />
+        <meta name='og:image' content='https://cargomty.com/cargomty-og.jpg' />
         <DefaultSeo
           canonical='https://cargomty.com/'
           openGraph={{
             images: [
               {
-                url: 'https://cargomonterrey.luiscarrillo.mx/cargomty-og.jpg',
+                url: 'https://cargomty.com/cargomty-og.jpg',
                 width: 870,
                 height: 365,
                 alt: 'Og Image Alt',
