@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { ToastContainer, toast } from 'react-toastify';
 
 type InputProps = {
   label: string;
@@ -30,6 +31,17 @@ const ContactForm = ({
   subjectInput,
   btnMessage,
 }: Props) => {
+  const errorMsg = () =>
+    toast.error('Hubo un error al enviar tu mensaje, intentalo de nuevo.', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [loading, setLoading] = useState(false);
   const {
@@ -60,14 +72,25 @@ const ContactForm = ({
       });
 
       if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
+        errorMsg();
       }
 
       await response.json();
+      toast.success('Gracias, tu mensaje ha sido enviado con éxito.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'colored',
+      });
       reset();
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err);
+      errorMsg();
     } finally {
       setLoading(false);
     }
@@ -169,11 +192,15 @@ const ContactForm = ({
       <div className='h-3' />
       <button
         type='submit'
-        className='btn btn-secondary btn-block py-0 text-white lg:w-56'
+        className={clsx(
+          'btn btn-secondary btn-block py-0 text-white lg:w-56',
+          loading && 'loading disabled:text-gray-300',
+        )}
         disabled={loading}
       >
         {btnMessage}
       </button>
+      <ToastContainer className='text-base' />
     </form>
   );
 };

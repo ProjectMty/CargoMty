@@ -7,6 +7,7 @@ import '@/styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'animate.css/animate.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import 'react-toastify/dist/ReactToastify.min.css';
 
 config.autoAddCss = false;
 

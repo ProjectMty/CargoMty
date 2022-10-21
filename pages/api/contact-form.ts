@@ -72,7 +72,9 @@ export default async function handler(
       from: process.env.SENDGRID_FROM_EMAIL as string,
       subject: 'Nuevo prospecto desde cargomty.com',
       text: 'Se ha registrado un prospecto a través de cargomty.com',
-      html: `<table>
+      html: `
+      <p>Se ha registrado un prospecto a través de cargomty.com</p>
+      <table>
       <thead>
         <tr>
           <th>Name</th>
