@@ -51,16 +51,13 @@ const ContactForm = ({
       }
 
       setLoading(true);
-      const response = await fetch(
-        `${process.env.API_URL as string}/api/contact-form`,
-        {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({ ...data, token }),
+      const response = await fetch(`/api/contact-form`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
         },
-      );
+        body: JSON.stringify({ ...data, token }),
+      });
 
       if (!response.ok) {
         throw new Error(`Error! status: ${response.status}`);

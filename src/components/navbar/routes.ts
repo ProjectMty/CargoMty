@@ -16,6 +16,6 @@ export const EN_MENU_ITEMS = [
   { title: 'Order Fulfillment', href: 'order-fulfillment' },
   { title: 'Competitive Rates', href: 'competitive-rates' },
   { title: 'Costs', href: 'costs' },
-  { title: 'Ecommerce', href: 'ecommerce' },
+  { title: 'Service for Mexico', href: 'service-for-mexico' },
   { title: 'Contact', href: 'contact' },
 ];

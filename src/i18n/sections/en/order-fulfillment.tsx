@@ -8,8 +8,8 @@ const OrderFulfillment = () => {
         Cargo Monterrey grew to serve more than 400 clients every month due to
         its attention to detail and cautious execution of each project. No two
         projects are alike. While we service a lot of clients, we are still a
-        mid-size company with just one level management. Rest assured a manager
-        and even the owners are monitoring your project.
+        mid-size company with just one level of management. Rest assured a
+        manager and even the owners are monitoring your project.
       </p>
       <p>
         We specialize in order fulfillment for small and mid-size companies.

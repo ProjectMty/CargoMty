@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 const Ecommerce = () => {
   return (
-    <section id='ecommerce' className='ecommerce-separator mexico-cargo'>
+    <section
+      id='service-for-mexico'
+      className='ecommerce-separator mexico-cargo'
+    >
       <h2 className='text-base font-normal uppercase text-white lg:text-2xl 2xl:text-3xl'>
         <strong>Get to know</strong> our service
         <br />

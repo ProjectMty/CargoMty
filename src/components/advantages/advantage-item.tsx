@@ -11,7 +11,7 @@ const AdvantageItem = ({ title, icon = faCircleCheck }: Props) => {
         <FontAwesomeIcon icon={icon} className='text-4xl' />
       </div>
       <p
-        className='text-left text-base font-light
+        className='text-left text-base font-normal
       sm:text-lg
       md:text-xl
       lg:text-xl

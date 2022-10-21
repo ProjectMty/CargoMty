@@ -1,6 +1,6 @@
 const Nosotros = () => {
   return (
-    <section id='nosotros' className='animate__animated animate__fadeInUp'>
+    <section id='nosotros' className=''>
       <h2 className='leading-tight'>
         ¡Somos tu shipping address
         <br />

@@ -12,7 +12,7 @@ const DaisyNavbar = ({
   title?: string;
 }) => {
   return (
-    <nav className='navbar sticky top-0 z-50 bg-base-100 shadow-xl'>
+    <nav className='navbar sticky top-0 z-[200] bg-base-100 shadow-xl'>
       <div className='flex-1'>
         {/* <span className='text-xl font-semibold normal-case'>{title}</span> */}
         <Image

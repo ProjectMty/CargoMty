@@ -17,7 +17,7 @@ const Partnerships = () => {
       className='section-full flex items-center justify-center'
     >
       <div className='w-full xl:w-3/4 2xl:w-4/5'>
-        <h2 className='mb-12'>Nuestro partnerships</h2>
+        <h2 className='mb-12'>Partnerships</h2>
         <Carousel
           className='carousel-css w-full'
           centerMode={isLg}

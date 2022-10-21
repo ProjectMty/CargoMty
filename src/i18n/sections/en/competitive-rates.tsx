@@ -14,10 +14,6 @@ const CompetitiveRates = () => {
   return (
     <section id='competitive-rates' className='text-justify'>
       <h2 className='text-center'>Competitive Rates</h2>
-      <h3>
-        Cargo Monterrey offers you the lowest fulfillment costs in the Mexico
-        market. Our business is in volume.
-      </h3>
       <p>
         Cargo Monterrey offers you the lowest fulfillment costs in the Mexico
         market. Our business is in volume.
@@ -34,7 +30,7 @@ const CompetitiveRates = () => {
         any of our facilities. If it isn't essential to our operation, we don't
         have it!
       </p>
-      <h3 className='text-center font-medium text-primary'>
+      <h3 className='text-center font-bold text-primary'>
         Faster Shipping at a Lower Cost
       </h3>
       <AdventagesContainer rows='2' advantages={shippingAdvantages} />

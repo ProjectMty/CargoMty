@@ -5,7 +5,7 @@ const Contacto = () => {
     <section id='contacto'>
       <h2>Contáctanos</h2>
       <ContactSection
-        title='¡Empieza a importar ya!!'
+        title='¡Empieza a importar ya!'
         location={{
           label:
             'Lázaro Cárdenas 999 Local 2, Col. Las Brisas, 64780, Monterrey, Nuevo León',

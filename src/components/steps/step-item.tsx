@@ -24,7 +24,7 @@ const StepItem = ({
       >
         {step}
         {showDots && (
-          <div className='lg:min-w-8 min-h-8 absolute top-full z-[999] translate-y-[16px] space-y-3 md:translate-y-[10px] lg:top-1/3 lg:left-full lg:flex lg:min-h-0 lg:translate-x-[50px] lg:space-x-3 lg:space-y-0 xl:translate-x-[72px] 2xl:translate-x-[114px]'>
+          <div className='lg:min-w-8 min-h-8 absolute top-full z-[100] translate-y-[16px] space-y-3 md:translate-y-[10px] lg:top-1/3 lg:left-full lg:flex lg:min-h-0 lg:translate-x-[50px] lg:space-x-3 lg:space-y-0 xl:translate-x-[72px] 2xl:translate-x-[114px]'>
             <div
               className={clsx(
                 'h-[6px] min-h-[6px] w-[6px] min-w-[6px] rounded-full lg:h-[12px] lg:min-h-[12px] lg:w-[12px] lg:min-w-[12px]',

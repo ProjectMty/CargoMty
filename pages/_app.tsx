@@ -5,7 +5,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import '@/styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'animate.css';
+import 'animate.css/animate.min.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
 config.autoAddCss = false;
@@ -26,11 +26,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         scriptProps={{
           async: false, // optional, default to false,
           defer: true, // optional, default to false
-          appendTo: 'body', // optional, default to "head", can be "head" or "body",
+          appendTo: 'head', // optional, default to "head", can be "head" or "body",
           nonce: undefined,
         }}
       >
-        <div data-theme='mytheme'>
+        <div id='theme' data-theme='mytheme'>
           <Component {...pageProps} />
         </div>
       </GoogleReCaptchaProvider>

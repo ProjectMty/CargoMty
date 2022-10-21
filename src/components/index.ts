@@ -9,3 +9,4 @@ export * from './footer';
 export * from './weight-lbs';
 export * from './contact-form';
 export * from './drawer';
+export * from './faq';
