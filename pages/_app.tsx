@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           openGraph={{
             images: [
               {
-                url: 'https://www.example.ie/cargomty-og.jpg',
+                url: 'https://cargomonterrey.luiscarrillo.mx/cargomty-og.jpg',
                 width: 870,
                 height: 365,
                 alt: 'Og Image Alt',
