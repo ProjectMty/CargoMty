@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 const Document = () => {
   return (
-    <Html className='scroll-smooth'>
+    <Html className='scroll-smooth' lang='es'>
       <Head>
         <meta charSet='UTF-8' />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />

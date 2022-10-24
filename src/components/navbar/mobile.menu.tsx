@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ES_MENU_ITEMS } from './routes';
+import { MENU_ITEMS } from './routes';
 import { MenuProps } from './types';
 
 const MobileMenu = ({ isOpen, handleOpenItem }: MenuProps) => {
@@ -11,7 +11,7 @@ const MobileMenu = ({ isOpen, handleOpenItem }: MenuProps) => {
         isOpen ? 'flex' : 'hidden',
       )}
     >
-      {ES_MENU_ITEMS.map(({ title, href }) => (
+      {MENU_ITEMS.map(({ title, href }) => (
         <a
           key={title}
           href={`#${href}`}

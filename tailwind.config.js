@@ -12,6 +12,9 @@ const config = {
       contrast: {
         110: '1.10',
       },
+      colors: {
+        'dark-primary': '#21165f',
+      },
     },
   },
   plugins: [

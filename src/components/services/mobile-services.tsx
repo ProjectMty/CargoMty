@@ -8,7 +8,7 @@ const MobileServices = ({ servicesList }: { servicesList: ServicesList[] }) => {
 
   return (
     <Carousel
-      className='my-5 bg-[#21165F] px-6 [&>.carousel.carousel-slider]:py-12'
+      className='my-5 bg-dark-primary px-6 [&>.carousel.carousel-slider]:py-12'
       emulateTouch
       infiniteLoop
       showArrows={false}

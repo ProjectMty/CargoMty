@@ -98,7 +98,7 @@ const ContactForm = ({
 
   return (
     <form
-      className='space-y-2 rounded-2xl bg-[#21165F] p-8 lg:w-1/2 lg:rounded-l-none lg:bg-[#21165FB2]'
+      className='space-y-2 rounded-2xl bg-dark-primary p-8 lg:w-1/2 lg:rounded-l-none lg:bg-[#21165FB2]'
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className='group form-control w-full '>

@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import { ReactNode, useState } from 'react';
 import { DaisyNavbar } from '../navbar';
-import { ES_MENU_ITEMS } from '../navbar/routes';
+import { MENU_ITEMS } from '../navbar/routes';
 
 type Props = {
   navbarLogo: string;
-  items: typeof ES_MENU_ITEMS;
+  items: typeof MENU_ITEMS;
   children: ReactNode;
 };
 
