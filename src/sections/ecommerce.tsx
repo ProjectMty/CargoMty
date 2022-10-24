@@ -7,7 +7,7 @@ const Ecommerce = () => {
         <strong>Conoce nuestro</strong> servicio <br className='lg:hidden' />{' '}
         para <strong>Estados Unidos</strong>
       </h2>
-      <Link href='https://cargomty.com/'>
+      <Link href='https://cargomonterrey.com/'>
         <a className='btn glass px-7' target='_blank' rel='noopener noreferrer'>
           Conocer más
         </a>

@@ -15,9 +15,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <DefaultSeo
-        title='Cargo Monterrey - Applied Logistics'
-        description='Cargo Monterrey is more than a freight forwarder. We are your complete cross-border e-commerce solution!. We give certainty and insure the orders we handle.'
-        canonical='https://cargomonterrey.com/'
+        title='Cargo Monterrey - Logística Aplicada'
+        description='Todos los trámites son cumpliendo las normas de cada país en el que trabajamos. Damos certeza y aseguramos los pedidos que manejamos.'
+        canonical='https://cargomty.com/'
         additionalMetaTags={[
           {
             name: 'viewport',
@@ -26,18 +26,18 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           {
             name: 'keywords',
             content:
-              'Cargo Monterrey Applied Logistics, logistics, Online Shopping, Mexico, USA, Canada, China, Europe, Warehouse, PO BOX, Trade, Import, Export',
+              'Cargo Monterrey Logística Aplicada, logística, compras online, México, USA, Canadá, China, Europa, Warehouse, PO BOX, Comercio, Importación, Exportación',
           },
           { name: 'author', content: 'Cargo Monterrey, Grayrids' },
         ]}
         openGraph={{
-          site_name: 'cargomonterrey',
+          site_name: 'cargomty',
           type: 'website',
-          locale: 'en',
-          url: 'https://cargomonterrey.com/',
+          locale: 'es',
+          url: 'https://cargomty.com/',
           images: [
             {
-              url: 'https://cargomonterrey.com/cargomty-og.jpg',
+              url: 'https://cargomty.com/cargomty-og.jpg',
               width: 870,
               height: 365,
               alt: 'Og Image Alt',
