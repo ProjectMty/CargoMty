@@ -18,8 +18,8 @@ const NotFound: NextPage = () => {
               <p className='px-12 pb-8 text-lg font-medium lg:text-xl'>
                 Parece que la página que estás buscando no existe.
               </p>
-              <Link href='/'>
-                <a className='btn btn-primary text-white'>Regresar a inicio</a>
+              <Link href='/' className='btn btn-primary text-white'>
+                Regresar a inicio
               </Link>
             </div>
           </div>

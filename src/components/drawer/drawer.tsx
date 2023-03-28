@@ -37,9 +37,7 @@ const Drawer = ({ navbarLogo, items, children }: Props) => {
         <ul className='menu w-80 overflow-y-auto bg-base-100 p-4'>
           {items.map(({ title, href }) => (
             <li key={href} onClick={toggleDrawer}>
-              <Link href={`#${href}`}>
-                <a>{title}</a>
-              </Link>
+              <Link href={`#${href}`}>{title}</Link>
             </li>
           ))}
         </ul>

@@ -2,7 +2,7 @@ import { Tab } from '@headlessui/react';
 import MexicoMap from '@/src/assets/maps/mexico-map.png';
 import USAMap from '@/src/assets/maps/usa-map.png';
 import CanadaMap from '@/src/assets/maps/canada-map.png';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 const Ubicaciones = () => {
   return (

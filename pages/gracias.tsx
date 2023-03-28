@@ -18,8 +18,8 @@ const Home: NextPage = () => {
           <p className='text-base lg:text-lg'>
             ¡Sus datos están a salvo con nosotros!
           </p>
-          <Link href='/'>
-            <a className='btn btn-primary text-white'>Regresar a inicio</a>
+          <Link href='/' className='btn btn-primary text-white'>
+            Regresar a inicio
           </Link>
         </div>
       </div>

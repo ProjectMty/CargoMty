@@ -5,7 +5,7 @@ import {
   spanishServicesList,
 } from '@/src/components';
 import { useMediaQuery } from '@/src/hooks';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 const Servicios = () => {
   const isLg = useMediaQuery('(max-width: 1023px)');
