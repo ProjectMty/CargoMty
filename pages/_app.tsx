@@ -35,6 +35,19 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-LEDG07K52F'
+      />
+      <Script id='google-analytics'>
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LEDG07K52F');
+        `}
+      </Script>
+      <Script
         id='fb-pixel'
         strategy='afterInteractive'
         dangerouslySetInnerHTML={{
