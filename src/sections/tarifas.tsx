@@ -12,8 +12,8 @@ const Tarifas = () => {
           </div>
 
           <div className='font-bold'>
-            <p>$1 a$500 USD</p>
-            <p>+ $82 USD Honorarios</p>
+            <p>$1 a $500 USD</p>
+            <p>+ $92 USD Honorarios</p>
             <p>+ Envío a tu domicilio</p>
           </div>
           <p>
@@ -36,7 +36,7 @@ const Tarifas = () => {
 
           <div className='font-bold'>
             <p>$501 a 3,000 USD</p>
-            <p>+ %18 USD Honorarios</p>
+            <p>+ 20% USD Honorarios</p>
             <p>+ Envío a tu domicilio</p>
           </div>
           <p>
