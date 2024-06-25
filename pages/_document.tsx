@@ -3,7 +3,7 @@
 import { FB_PIXEL_ID } from '@/src/utils';
 import { Head, Html, Main, NextScript } from 'next/document';
 
-const Document = () => {
+export default function Document() {
   return (
     <Html className='scroll-smooth' lang='es'>
       <Head>
@@ -34,6 +34,4 @@ const Document = () => {
       </body>
     </Html>
   );
-};
-
-export default Document;
+}

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 type InputProps = {
   label: string;
@@ -76,6 +77,8 @@ const ContactForm = ({
       }
 
       await response.json();
+      sendGTMEvent({ event: 'success-form', value: 'prospect' });
+
       toast.success('Gracias, tu mensaje ha sido enviado con éxito.', {
         position: 'top-right',
         autoClose: 5000,

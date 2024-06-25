@@ -1,5 +1,6 @@
 import * as fbq from '@/src/utils';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
@@ -15,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 config.autoAddCss = false;
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
@@ -34,19 +35,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <Script
-        async
-        src='https://www.googletagmanager.com/gtag/js?id=G-LEDG07K52F'
-      />
-      <Script id='google-analytics'>
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-LEDG07K52F');
-        `}
-      </Script>
       <Script
         id='fb-pixel'
         strategy='afterInteractive'
@@ -109,8 +97,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <Component {...pageProps} />
         </div>
       </GoogleReCaptchaProvider>
+      <GoogleAnalytics gaId='G-LEDG07K52F' />
+      <GoogleTagManager gtmId='GTM-PKNLKPL3' />
     </>
   );
-};
-
-export default MyApp;
+}
