@@ -3,6 +3,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import CargoMtyLogo from '@/src/assets/logo-cargomty.webp';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const DaisyNavbar = ({
   toggleDrawer,
@@ -16,14 +17,16 @@ const DaisyNavbar = ({
   return (
     <nav className='navbar sticky top-0 z-[200] bg-base-100 shadow-xl'>
       <div className='flex-1'>
-        <Image
-          width={1079}
-          height={270}
-          src={CargoMtyLogo}
-          alt={title}
-          className='w-40 bg-gray-500'
-          priority
-        />
+        <Link href='/'>
+          <Image
+            width={1079}
+            height={270}
+            src={CargoMtyLogo}
+            alt={title}
+            className='w-40 bg-gray-500'
+            priority
+          />
+        </Link>
       </div>
       <div className='flex-none'>
         <button

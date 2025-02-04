@@ -56,6 +56,15 @@ h6 {
 }
 
 @layer base {
+  h1 {
+    @apply font-sans text-4xl font-semibold
+    sm:text-4xl
+    md:text-5xl
+    lg:text-5xl
+    xl:text-6xl
+    2xl:text-6xl;
+  }
+
   h2 {
     @apply font-sans text-4xl font-semibold
     sm:text-4xl
@@ -178,6 +187,9 @@ focus:outline-none lg:hidden;
       ),
       url(/images/mobile/united-states-ecommerce.png);
   }
+  .separator-buy-and-ship {
+    background-image: url(/images/bg-buy-and-ship.png);
+  }
   .mexico-cargo {
     background-color: #21165f;
     background-image: linear-gradient(
@@ -220,5 +232,12 @@ focus:outline-none lg:hidden;
 
   .flex-center {
     @apply flex flex-col items-center justify-center;
+  }
+
+  .wrap-buy-ship {
+    @apply grid;
+  }
+  .wrap-buy-ship > * {
+    @apply col-[1] row-[1];
   }
 }

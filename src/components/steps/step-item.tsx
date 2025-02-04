@@ -1,5 +1,6 @@
 import { useMediaQuery } from '@/src/hooks';
 import clsx from 'clsx';
+import React from 'react';
 
 const StepItem = ({
   step,
@@ -8,7 +9,7 @@ const StepItem = ({
 }: {
   step: number;
   steps: number;
-  title: string;
+  title: React.ReactNode;
 }) => {
   const isLg = useMediaQuery('(min-width: 1023px)');
   const showDots = isLg && step % 3 !== 0 && step !== steps;
@@ -46,7 +47,7 @@ const StepItem = ({
           </div>
         )}
       </div>
-      <p className='text-left text-sm font-normal text-black lg:text-center lg:text-base'>
+      <p className='text-left text-lg font-normal text-black lg:text-center'>
         {title}
       </p>
     </div>

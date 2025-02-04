@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import { ReactNode, useState } from 'react';
 import { DaisyNavbar } from '../navbar';
-import { MENU_ITEMS } from '../navbar/routes';
+import { MAIN_MENU_ITEMS } from '../navbar/routes';
 
 type Props = {
   navbarLogo: string;
-  items: typeof MENU_ITEMS;
+  items: typeof MAIN_MENU_ITEMS;
   children: ReactNode;
 };
 
@@ -35,9 +35,9 @@ const Drawer = ({ navbarLogo, items, children }: Props) => {
       <div className='drawer-side'>
         <label htmlFor='my-drawer-3' className='drawer-overlay' />
         <ul className='menu w-80 overflow-y-auto bg-base-100 p-4'>
-          {items.map(({ title, href }) => (
+          {items.map(({ title, href, link }) => (
             <li key={href} onClick={toggleDrawer}>
-              <Link href={`#${href}`}>{title}</Link>
+              <Link href={`${link ? '/' : '#'}${href}`}>{title}</Link>
             </li>
           ))}
         </ul>
