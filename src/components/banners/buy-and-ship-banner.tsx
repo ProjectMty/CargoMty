@@ -7,10 +7,11 @@ const BuyAndShipBanner = ({ withInfo = true }: { withInfo?: boolean }) => {
       <Image
         src='/images/bg-buy-and-ship.png'
         alt='Background Buy And Shop'
-        width={1920}
-        height={1080}
+        width={2560}
+        height={1440}
         quality={100}
         priority
+        sizes='(max-width: 1080px) 100vw, (max-width: 1440px) 75vw, (max-width: 2560px) 50vw, 33vw'
         className='h-full object-fill xl:h-auto'
       />
       <div className='flex flex-col items-center justify-center gap-12 py-8 px-4 text-center text-white'>
@@ -21,6 +22,7 @@ const BuyAndShipBanner = ({ withInfo = true }: { withInfo?: boolean }) => {
           height={512}
           quality={100}
           priority
+          sizes='(max-width: 1080px) 100vw, (max-width: 2560px) 50vw, 33vw'
           className='w-52 md:w-80 xl:w-[512px]'
         />
         {withInfo && (
