@@ -1,7 +1,7 @@
 const Tarifas = () => {
   return (
     <section id='tarifas'>
-      <h2 className='my-6 text-center text-3xl font-bold'>Tarifas</h2>
+      <h2 className='mb-12'>Tarifas</h2>
       <div className='flex flex-col items-center justify-center space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0'>
         {/* Tarjeta 1 */}
         <div className='tarifas-card'>
