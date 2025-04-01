@@ -9,10 +9,11 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales 
             </h2>
+            <h3 className='text-lg font-bold uppercase md:text-2xl'>
+              ($1 a $100 USD)
+            </h3>
           </div>
-          <div className='font-bold'>
-            <p>($1 a $100 USD)</p>
-          </div>
+         
           <div className='font-bold'>
             <p>+ Honorarios $45 USD</p>
             <p>+ $2.00 USD por cada caja / $1.00 por bolsa</p>
@@ -35,10 +36,11 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales 
             </h2>
+            <h3 className='text-lg font-bold uppercase md:text-2xl'>
+              ($101 a $475 USD)
+            </h3>
           </div>
-          <div className='font-bold'>
-            <p>($101 a $475 USD)</p>
-          </div>
+          
           <div className='font-bold'>
             <p>+ Honorarios $95 USD</p>
             <p>+ $2.00 USD por cada caja / $1.00 por bolsa</p>
@@ -61,10 +63,11 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales
             </h2>
+            <h3 className='text-lg font-bold uppercase md:text-2xl'>
+              ($476 A $3,000 USD )
+            </h3>
           </div>
-          <div className='font-bold'>
-            <p>($476 A $3,000 USD )</p>
-          </div>
+          
           <div className='font-bold'>
             <p>+ Honorarios 19%</p>
             <p>+ $2.00 USD por cada caja / $1.00 USD por bolsa</p>
