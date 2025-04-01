@@ -120,7 +120,7 @@ const ContactForm = ({
           type='text'
           placeholder={nameInput.placeholder}
           className={clsx(
-            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            'input input-bordered w-full text-black  group-focus-within:input-secondary placeholder:text-gray-400',
             errors.name && 'input-error group-focus-within:input-error',
           )}
           {...register('name', { required: true })}
@@ -142,7 +142,7 @@ const ContactForm = ({
           type='text'
           placeholder={phoneInput.placeholder}
           className={clsx(
-            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            'input input-bordered w-full text-black  group-focus-within:input-secondary placeholder:text-gray-400',
             errors.phone && 'input-error group-focus-within:input-error',
           )}
           {...register('phone', { required: true })}
@@ -164,7 +164,7 @@ const ContactForm = ({
           type='email'
           placeholder={emailInput.placeholder}
           className={clsx(
-            'input input-bordered w-full text-black  placeholder:text-gray-400 group-focus-within:input-secondary',
+            'input input-bordered w-full text-black  group-focus-within:input-secondary placeholder:text-gray-400',
             errors.email && 'input-error group-focus-within:input-error',
           )}
           {...register('email', { required: true })}
@@ -185,7 +185,7 @@ const ContactForm = ({
           id='subject'
           placeholder={subjectInput.placeholder}
           className={clsx(
-            'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y text-black placeholder:text-gray-400 group-focus-within:textarea-secondary',
+            'textarea textarea-bordered min-h-16 h-36 max-h-48 w-full resize-y text-black group-focus-within:textarea-secondary placeholder:text-gray-400',
             errors.subject &&
               'textarea-error group-focus-within:textarea-error',
           )}

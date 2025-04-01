@@ -16,7 +16,7 @@ const FaqDisclosure = ({ faq: { time, protection, returning } }: Props) => {
           <>
             <Disclosure.Button
               className={clsx(
-                'flex w-full items-center justify-between rounded-lg bg-primary bg-[#3926AE40] px-4 py-2 text-left text-sm font-normal text-primary focus:outline-none',
+                'flex w-full items-center justify-between rounded-lg bg-[#3926AE40] bg-primary px-4 py-2 text-left text-sm font-normal text-primary focus:outline-none',
                 open && 'bg-[#3826aeff] text-white',
               )}
             >
@@ -29,7 +29,7 @@ const FaqDisclosure = ({ faq: { time, protection, returning } }: Props) => {
                 )}
               />
             </Disclosure.Button>
-            <Disclosure.Panel className='px-4 pt-4 pb-2 text-justify text-sm'>
+            <Disclosure.Panel className='px-4 pb-2 pt-4 text-justify text-sm'>
               {time.content}
             </Disclosure.Panel>
           </>
@@ -40,7 +40,7 @@ const FaqDisclosure = ({ faq: { time, protection, returning } }: Props) => {
           <>
             <Disclosure.Button
               className={clsx(
-                'flex w-full items-center justify-between rounded-lg bg-primary bg-[#3926AE40] px-4 py-2 text-left text-sm font-normal text-primary focus:outline-none',
+                'flex w-full items-center justify-between rounded-lg bg-[#3926AE40] bg-primary px-4 py-2 text-left text-sm font-normal text-primary focus:outline-none',
                 open && 'bg-[#3826aeff] text-white',
               )}
             >
@@ -53,7 +53,7 @@ const FaqDisclosure = ({ faq: { time, protection, returning } }: Props) => {
                 )}
               />
             </Disclosure.Button>
-            <Disclosure.Panel className='px-4 pt-4 pb-2 text-justify text-sm'>
+            <Disclosure.Panel className='px-4 pb-2 pt-4 text-justify text-sm'>
               {protection.content}
             </Disclosure.Panel>
           </>
@@ -64,7 +64,7 @@ const FaqDisclosure = ({ faq: { time, protection, returning } }: Props) => {
           <>
             <Disclosure.Button
               className={clsx(
-                'flex w-full items-center justify-between rounded-lg bg-primary bg-[#3926AE40] px-4 py-2 text-left text-sm font-normal text-primary focus:outline-none',
+                'flex w-full items-center justify-between rounded-lg bg-[#3926AE40] bg-primary px-4 py-2 text-left text-sm font-normal text-primary focus:outline-none',
                 open && 'bg-[#3826aeff] text-white',
               )}
             >
@@ -77,7 +77,7 @@ const FaqDisclosure = ({ faq: { time, protection, returning } }: Props) => {
                 )}
               />
             </Disclosure.Button>
-            <Disclosure.Panel className='px-4 pt-4 pb-2 text-justify text-sm'>
+            <Disclosure.Panel className='px-4 pb-2 pt-4 text-justify text-sm'>
               {returning.content}
             </Disclosure.Panel>
           </>

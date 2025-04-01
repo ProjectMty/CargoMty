@@ -14,7 +14,7 @@ const BuyAndShipBanner = ({ withInfo = true }: { withInfo?: boolean }) => {
         sizes='(max-width: 1080px) 100vw, (max-width: 1440px) 75vw, (max-width: 2560px) 50vw, 33vw'
         className='h-full object-fill xl:h-auto xl:max-h-screen'
       />
-      <div className='flex flex-col items-center justify-center gap-12 py-8 px-4 text-center text-white'>
+      <div className='flex flex-col items-center justify-center gap-12 px-4 py-8 text-center text-white'>
         <Image
           src='/images/logo-buy-and-ship.svg'
           alt='logo Buy And Shop'

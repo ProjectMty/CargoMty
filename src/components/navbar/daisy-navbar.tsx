@@ -31,7 +31,7 @@ const DaisyNavbar = ({
       <div className='flex-none'>
         <button
           type='button'
-          className={clsx('btn btn-ghost btn-circle', hideButton && 'hidden')}
+          className={clsx('btn btn-circle btn-ghost', hideButton && 'hidden')}
           aria-label='open-menu'
           onClick={toggleDrawer}
         >

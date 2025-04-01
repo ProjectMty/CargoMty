@@ -14,7 +14,7 @@ const Servicios = () => {
     <>
       <section
         id='servicios'
-        className='text-primary lg:w-full lg:max-w-full lg:flex-row lg:justify-center lg:space-y-0 lg:space-x-12 lg:bg-dark-primary lg:text-white xl:space-x-24 2xl:space-x-24'
+        className='text-primary lg:w-full lg:max-w-full lg:flex-row lg:justify-center lg:space-x-12 lg:space-y-0 lg:bg-dark-primary lg:text-white xl:space-x-24 2xl:space-x-24'
       >
         <h2 className='block lg:hidden'>Nuestros servicios</h2>
         <Image
