@@ -9,9 +9,9 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales 
             </h2>
-            <p className='font-bold'>
-              ($1 a $100 USD)
-            </p>
+            <div className='font-bold'>
+              <p>($1 a $100 USD)</p>
+            </div>
           </div>
           
           <div className='font-bold'>
@@ -36,9 +36,9 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales 
             </h2>
-            <p className='font-bold'>
-              ($101 a $475 USD)
-            </p>
+            <div className='font-bold'>
+              <p>($101 a $475 USD)</p>
+            </div>
           </div>
           <div className='font-bold'>
             <p>+ Honorarios $95 USD</p>
@@ -62,9 +62,9 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales
             </h2>
-            <p className='font-bold'>
-              ($476 A $3,000 USD )
-            </p>
+            <div className='font-bold'>
+              <p>($476 A $3,000 USD )</p>
+            </div>
           </div>
           <div className='font-bold'>
             <p>+ Honorarios 19%</p>
