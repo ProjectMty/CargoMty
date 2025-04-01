@@ -2,9 +2,9 @@ const Nosotros = () => {
   return (
     <section id='nosotros' className=''>
       <h2 className='leading-tight'>
-        ¡Somos tu shipping address
+        ¡Somos la mejor solución para
         <br />
-        en Estados Unidos!
+        envíos y fletes de USA a México!
       </h2>
       <p>
         <strong className='font-semibold'>Cargo Monterrey</strong> es tu
