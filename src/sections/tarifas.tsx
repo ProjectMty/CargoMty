@@ -3,7 +3,6 @@ const Tarifas = () => {
     <section id='tarifas'>
       <h2 className='my-6 text-center text-3xl font-bold'>Tarifas</h2>
       <div className='flex flex-col items-center justify-center space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0'>
-
         {/* Tarjeta 1 */}
         <div className='tarifas-card'>
           <div>
@@ -21,14 +20,14 @@ const Tarifas = () => {
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $100 USD, pero es mercancía repetitiva o
-            para vender, adicional al servicio de honorario, se cobra el 16% IVA.
+            para vender, adicional al servicio de honorario, se cobra el 16%
+            IVA.
           </p>
           <p className='text-xs font-extralight'>
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
         </div>
-
         {/* Tarjeta 2 */}
         <div className='tarifas-card'>
           <div>
@@ -46,7 +45,8 @@ const Tarifas = () => {
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $475 USD, pero es mercancía repetitiva o
-            para vender, adicional al servicio de honorario, se cobra el 16% IVA.
+            para vender, adicional al servicio de honorario, se cobra el 16%
+            IVA.
           </p>
           <p className='text-xs font-extralight'>
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
@@ -64,6 +64,7 @@ const Tarifas = () => {
               ($476 A $3,000 USD)
             </h3>
           </div>
+
           <div className='font-bold'>
             <p>+ Honorarios 19%</p>
             <p>+ $2.00 USD por cada caja / $1.00 USD por bolsa</p>
@@ -71,7 +72,8 @@ const Tarifas = () => {
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $3,000 USD, pero es mercancía repetitiva o
-            para vender, adicional al servicio de honorario, se cobra el 16% IVA.
+            para vender, adicional al servicio de honorario, se cobra el 16%
+            IVA.
           </p>
           <p className='text-xs font-extralight'>
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
