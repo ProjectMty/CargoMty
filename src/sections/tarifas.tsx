@@ -3,17 +3,17 @@ const Tarifas = () => {
     <section id='tarifas'>
       <h2 className='my-6 text-center text-3xl font-bold'>Tarifas</h2>
       <div className='flex flex-col items-center justify-center space-y-12 lg:flex-row lg:space-x-8 lg:space-y-0'>
+
         {/* Tarjeta 1 */}
         <div className='tarifas-card'>
           <div>
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
-              Compras personales 
+              Compras personales
             </h2>
             <h3 className='text-lg font-bold uppercase md:text-2xl'>
               ($1 a $100 USD)
             </h3>
           </div>
-         
           <div className='font-bold'>
             <p>+ Honorarios $45 USD</p>
             <p>+ $2.00 USD por cada caja / $1.00 por bolsa</p>
@@ -21,8 +21,7 @@ const Tarifas = () => {
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $100 USD, pero es mercancía repetitiva o
-            para vender, adicional al servicio de honorario, se cobra el 16%
-            IVA.
+            para vender, adicional al servicio de honorario, se cobra el 16% IVA.
           </p>
           <p className='text-xs font-extralight'>
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
@@ -34,13 +33,12 @@ const Tarifas = () => {
         <div className='tarifas-card'>
           <div>
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
-              Compras personales 
+              Compras personales
             </h2>
             <h3 className='text-lg font-bold uppercase md:text-2xl'>
               ($101 a $475 USD)
             </h3>
           </div>
-          
           <div className='font-bold'>
             <p>+ Honorarios $95 USD</p>
             <p>+ $2.00 USD por cada caja / $1.00 por bolsa</p>
@@ -48,8 +46,7 @@ const Tarifas = () => {
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $475 USD, pero es mercancía repetitiva o
-            para vender, adicional al servicio de honorario, se cobra el 16%
-            IVA.
+            para vender, adicional al servicio de honorario, se cobra el 16% IVA.
           </p>
           <p className='text-xs font-extralight'>
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
@@ -64,10 +61,9 @@ const Tarifas = () => {
               Compras personales
             </h2>
             <h3 className='text-lg font-bold uppercase md:text-2xl'>
-              ($476 A $3,000 USD )
+              ($476 A $3,000 USD)
             </h3>
           </div>
-          
           <div className='font-bold'>
             <p>+ Honorarios 19%</p>
             <p>+ $2.00 USD por cada caja / $1.00 USD por bolsa</p>
@@ -75,8 +71,7 @@ const Tarifas = () => {
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $3,000 USD, pero es mercancía repetitiva o
-            para vender, adicional al servicio de honorario, se cobra el 16%
-            IVA.
+            para vender, adicional al servicio de honorario, se cobra el 16% IVA.
           </p>
           <p className='text-xs font-extralight'>
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
