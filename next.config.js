@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cargomty.com'], // Asegúrate de que el dominio esté correcto
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cargomty.com', // Asegúrate de que el dominio esté correcto
+      },
+    ],
   },
   reactStrictMode: true,
   // Agregar configuración para la compilación optimizada en Netlify si es necesario
