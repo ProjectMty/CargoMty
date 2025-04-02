@@ -5,7 +5,7 @@ import Link from 'next/link';
 const NotFound: NextPage = () => {
   return (
     <div className='flex h-screen flex-col'>
-      <div className=' flex grow-[1] items-center justify-center bg-gradient-to-tr from-primary to-dark-primary'>
+      <div className='flex grow items-center justify-center bg-gradient-to-tr from-primary to-dark-primary'>
         <div className='flex w-9/12 items-center justify-center py-16'>
           <div className='overflow-hidden rounded-lg bg-white pb-8 shadow'>
             <div className='border-t border-gray-200 pt-8 text-center'>
