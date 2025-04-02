@@ -15,6 +15,17 @@ const config = {
       colors: {
         'dark-primary': '#21165f',
       },
+      animation: {
+        // Definir la animación personalizada
+        'fade-in-up': 'fadeInUp 0.5s ease-out',
+      },
+      keyframes: {
+        // Definir los pasos de la animación
+        fadeInUp: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [
