@@ -12,8 +12,9 @@ const BuyAndShipBanner = ({ withInfo = true }: { withInfo?: boolean }) => {
         quality={100}
         priority
         sizes='(max-width: 1080px) 100vw, (max-width: 1440px) 75vw, (max-width: 2560px) 50vw, 33vw'
-        className='h-full object-fill xl:h-auto xl:max-h-screen'
+        className='w-full h-full object-cover'
       />
+
       <div className='flex flex-col items-center justify-center gap-12 px-4 py-8 text-center text-white'>
         <Image
           src='/images/logo-buy-and-ship.svg'
