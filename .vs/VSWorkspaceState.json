@@ -1,9 +1,5 @@
 {
-  "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\sections"
-  ],
+  "ExpandedNodes": ["", "\\src", "\\src\\sections"],
   "SelectedNode": "\\src\\sections\\partnerships.tsx",
   "PreviewInSolutionExplorer": false
 }
