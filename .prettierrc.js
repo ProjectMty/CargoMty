@@ -5,7 +5,6 @@ module.exports = {
   bracketSameLine: false,
   bracketSpacing: true,
   endOfLine: 'lf',
-  eslintIntegration: true,
   jsxSingleQuote: true,
   printWidth: 80,
   semi: true,
