@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist:['animate-fade-in-up'],
   theme: {
     extend: {
       fontFamily: {

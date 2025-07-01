@@ -14,9 +14,8 @@ const Tarifas = () => {
             </h3>
           </div>
           <div className="font-bold">
-            <p>+ Honorarios $45 USD</p>
-            <p>+ $2.00 USD por cada caja / $1.00 por bolsa</p>
-            <p>+ Envío a tu domicilio</p>
+            <p>15% sobre el valor de tu compra</p>
+
           </div>
           <p className="text-xs font-extralight">
             Si la compra es menor a $100 USD, pero es mercancía repetitiva o
@@ -26,6 +25,9 @@ const Tarifas = () => {
           <p className="text-xs font-extralight">
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
+          </p>
+          <p className="text-xs font-extralight">
+            *La tarifa o el cobro mínimo es de $300MXN
           </p>
         </div>
 
@@ -40,9 +42,7 @@ const Tarifas = () => {
             </h3>
           </div>
           <div className="font-bold">
-            <p>+ Honorarios $95 USD</p>
-            <p>+ $2.00 USD por cada caja / $1.00 por bolsa</p>
-            <p>+ Envío a tu domicilio</p>
+            <p>14% sobre el valor de tu compra</p>
           </div>
           <p className="text-xs font-extralight">
             Si la compra es menor a $475 USD, pero es mercancía repetitiva o
@@ -52,6 +52,9 @@ const Tarifas = () => {
           <p className="text-xs font-extralight">
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
+          </p>
+          <p className="text-xs font-extralight">
+            *La tarifa o el cobro mínimo es de $300MXN
           </p>
         </div>
 
@@ -67,9 +70,8 @@ const Tarifas = () => {
           </div>
 
           <div className="font-bold">
-            <p>+ Honorarios 19%</p>
-            <p>+ $2.00 USD por cada caja / $1.00 USD por bolsa</p>
-            <p>+ Envío a domicilio</p>
+            <p>13% sobre el valor de tu compra</p>
+
           </div>
           <p className="text-xs font-extralight">
             Si la compra es menor a $3,000 USD, pero es mercancía repetitiva o
@@ -80,6 +82,7 @@ const Tarifas = () => {
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
+
         </div>
 
         {/* Tarjeta 4 - Empresariales */}
@@ -89,26 +92,37 @@ const Tarifas = () => {
               Empresariales
             </h2>
           </div>
-          <p className="text-xs font-extralight">
-            Las compras empresariales se cotizan de acuerdo con la naturaleza
-            del producto, para calcular los aranceles y los fletes, los cuales
-            dependen del peso y volumen de la mercancía.
-          </p>
-          <div className="font-bold">
-            <p>Los conceptos que se cobran son los siguientes:</p>
+         <div className="font-bold">
+            <p>Las compras empresariales se cotizan de acuerdo con la naturaleza del producto, para calcular los aranceles y los fletes, los cuales dependen del peso y volumen de la mercancía.</p>
+
           </div>
+
           <div className="font-bold">
-            <p>• Honorarios 19%</p>
-            <p>• IVA 16%</p>
-            <p>• Aranceles</p>
-            <p>• Fletes, sobrepeso y dimensiones de la mercancía</p>
+            <p>12% sobre el valor de tu compra</p>
+
           </div>
           <p className="text-xs font-extralight">
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
+
         </div>
       </div>
+      <h2 className="mb-6 text-lg font-bold uppercase md:text-2xl">
+  Cobros adicionales
+</h2>
+<ul className="list-disc list-inside space-y-2 text-base font-medium">
+  <li>
+    El envío al destino final en México no está incluido y será determinado por
+    separado, según el destino y las características del paquete.
+  </li>
+  <li>$3.00 USD por cada bolsa, caja o sobre recibido.</li>
+  <li>$10.00 USD por cada tarima descargada.</li>
+  <li>$375.00 USD por cada tarima recibida de hasta 500 libras.</li>
+  <li>$515.00 USD por cada tarima recibida que supere las 500 libras.</li>
+
+</ul>
+
     </section>
   );
 };
