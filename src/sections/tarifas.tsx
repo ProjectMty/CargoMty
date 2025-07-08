@@ -25,7 +25,6 @@ const Tarifas = () => {
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
-
         </div>
 
         {/* Tarjeta 2 */}
@@ -50,7 +49,6 @@ const Tarifas = () => {
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
-
         </div>
 
         {/* Tarjeta 3 */}
