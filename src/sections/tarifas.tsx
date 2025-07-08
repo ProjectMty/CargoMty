@@ -9,9 +9,9 @@ const Tarifas = () => {
             <h2 className='text-lg font-bold uppercase md:text-2xl'>
               Compras personales
             </h2>
-             <div className='font-bold'>
-            <p>(Menor a $119 USD)</p>
-          </div>
+            <div className='font-bold'>
+              <p>(Menor a $119 USD)</p>
+            </div>
           </div>
           <div className='font-bold'>
             <p>Tarifa de $300 MXN</p>
@@ -58,8 +58,8 @@ const Tarifas = () => {
               Compras personales
             </h2>
             <div className='font-bold'>
-            <p>($476 a $3000 USD)</p>
-          </div>
+              <p>($476 a $3000 USD)</p>
+            </div>
           </div>
 
           <div className='font-bold'>
