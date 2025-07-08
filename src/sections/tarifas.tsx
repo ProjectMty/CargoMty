@@ -10,11 +10,11 @@ const Tarifas = () => {
               Compras personales
             </h2>
             <h3 className='text-lg font-bold uppercase md:text-2xl'>
-              ($1 a $100 USD)
+              (Menor a $119 USD)
             </h3>
           </div>
           <div className='font-bold'>
-            <p>15% sobre el valor de tu compra</p>
+            <p>Tarifa de $300 MXN</p>
           </div>
           <p className='text-xs font-extralight'>
             Si la compra es menor a $100 USD, pero es mercancía repetitiva o
@@ -25,9 +25,7 @@ const Tarifas = () => {
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
-          <p className='text-xs font-extralight'>
-            *La tarifa o el cobro mínimo es de $300MXN
-          </p>
+
         </div>
 
         {/* Tarjeta 2 */}
@@ -37,7 +35,7 @@ const Tarifas = () => {
               Compras personales
             </h2>
             <h3 className='text-lg font-bold uppercase md:text-2xl'>
-              ($101 a $475 USD)
+              ($120 a $475 USD)
             </h3>
           </div>
           <div className='font-bold'>
@@ -52,9 +50,7 @@ const Tarifas = () => {
             *Sobrepeso: Arriba de 20 kg peso volumétrico se le agrega concepto
             de sobrepeso.
           </p>
-          <p className='text-xs font-extralight'>
-            *La tarifa o el cobro mínimo es de $300MXN
-          </p>
+
         </div>
 
         {/* Tarjeta 3 */}
